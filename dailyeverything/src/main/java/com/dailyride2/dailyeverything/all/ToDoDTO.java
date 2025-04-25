@@ -1,4 +1,4 @@
-package todolist;
+package com.dailyride2.dailyeverything.all;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package todolist;
+package com.dailyride2.dailyeverything.all;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -14,27 +14,27 @@ public class ToDoController {
     }
 
     @PostMapping
-    public ToDoEntity createTodo(@RequestBody ToDoDTO dto) {
+    public ToDo createToDo(@RequestBody ToDoDTO dto) {
         return service.createToDo(dto);
     }
 
     @GetMapping
-    public List<ToDoEntity> getAllTodos() {
+    public List<ToDo> getAllTodos() {
         return service.getAllToDos();
     }
 
     @GetMapping("/{id}")
-    public ToDoEntity getTodoById(@PathVariable Long id) {
+    public ToDo getToDoById(@PathVariable Long id) {
         return service.getToDoById(id);
     }
 
     @PutMapping("/{id}")
-    public ToDoEntity updateTodo(@PathVariable Long id, @RequestBody ToDoDTO dto) {
+    public ToDo updateToDo(@PathVariable Long id, @RequestBody ToDoDTO dto) {
         return service.updateToDo(id, dto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTodo(@PathVariable Long id) {
+    public void deleteToDo(@PathVariable Long id) {
         service.deleteToDo(id);
     }
 
