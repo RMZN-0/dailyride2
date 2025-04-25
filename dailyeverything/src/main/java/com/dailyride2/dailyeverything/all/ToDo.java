@@ -1,18 +1,25 @@
-package todolist;
+package com.dailyride2.dailyeverything.all;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 
 @Entity
-public class ToDoEntity {
+@Getter
+@Setter
+@RequiredArgsConstructor
+@ToString
+public class ToDo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
+    @NotNull
     private String description;
     private boolean completed;
 
@@ -24,6 +31,6 @@ public class ToDoEntity {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Getters and Setters
+
 }
 
